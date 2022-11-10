@@ -2,3 +2,8 @@
 # This project is intended to provide python package for rapidly analyzing genome assemblies of Salmonella bacteria. 
 
 Prevalent foodborne pathogens that is Salmonella bacteria can cause serious illness which is mainly gastroenteritis 
+
+
+Instructions:
+1. All genome assembly files must be contained in a single folder; and that folder must not have any sub-folders.
+2. For each name of a genome assembly file, the program assigns a string in front of the first period symbol to be the main output name. For instances, if the name of an assembly file is Assembly1.scaffolds.fasta, the main output name (and also the output folder name) becomes "Assembly1". 
