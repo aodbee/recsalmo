@@ -61,6 +61,7 @@ This project is written mainly in Python; there are several dependent packages a
   Instruction on installation: https://anaconda.org/bioconda/blast
   You can install this on Ubuntu terminal directly:
   >sudo apt-get -y install ncbi-blast+
+
 Notice that for all the required tools above, you can conveniently use conda to install (via bioconda channel). So, you can the following on the terminal
   >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,blast
 
@@ -74,8 +75,10 @@ You can use pip3 command (since python3 is used) to install all of those python 
   >pip3 install biopython,numpy,seaborn,matplotlib,openpyxl
 
 In summary, create a folder (any name is fine) and put all the files/folders above inside. Then do the followings on the Ubuntu terminal,
-then you are good to go.
+and you are good to go.
+
 >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,blast
+
 >pip3 install biopython,numpy,seaborn,matplotlib,openpyxl
 
 
