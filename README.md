@@ -59,7 +59,8 @@ This project is written mainly in Python; there are several dependent packages a
   Instruction on installation: https://anaconda.org/bioconda/ncbi-amrfinderplus
 - NCBI Blast+
   Instruction on installation: https://anaconda.org/bioconda/blast
-  You can install this on Ubuntu terminal directly:
+
+  You can also install this on Ubuntu terminal directly:
   >sudo apt-get -y install ncbi-blast+
 
 Notice that for all the required tools above, you can conveniently use conda to install (via bioconda channel). So, you can the following on the terminal
