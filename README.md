@@ -57,6 +57,8 @@ This project is written mainly in Python; there are several dependent packages a
   Instruction on installation: https://anaconda.org/bioconda/fastmlst
 - AMRFinderPlus
   Instruction on installation: https://anaconda.org/bioconda/ncbi-amrfinderplus
+- ParSNP
+  Instruction on installation: https://anaconda.org/bioconda/parsnp
 - NCBI Blast+
   Instruction on installation: https://anaconda.org/bioconda/blast
 
@@ -64,7 +66,7 @@ This project is written mainly in Python; there are several dependent packages a
   >sudo apt-get -y install ncbi-blast+
 
 Notice that for all the required tools above, you can conveniently use conda to install (via bioconda channel). So, you can the following on the terminal
-  >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,blast
+  >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,parsnp,blast
 
 Other required python packages are as follows,
 - biopython
@@ -78,7 +80,7 @@ You can use pip3 command (since python3 is used) to install all of those python 
 In summary, create a folder (any name is fine) and put all the files/folders above inside. Then do the followings on the Ubuntu terminal,
 and you are good to go.
 
->conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,blast
+>conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,parsnp,blast
 
 >pip3 install biopython,numpy,seaborn,matplotlib,openpyxl
 
