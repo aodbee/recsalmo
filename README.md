@@ -72,7 +72,7 @@ This project is written mainly in Python; there are several dependent packages a
   >sudo apt-get -y install ncbi-blast+
 
 Notice that for all the required tools above, you can conveniently use conda to install (via bioconda channel). So, you can the following on the terminal
-  >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplut,parsnp,blast
+  >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplus,parsnp,blast
 
 Other required python packages are as follows,
 - biopython
