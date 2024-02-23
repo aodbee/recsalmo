@@ -1,4 +1,4 @@
-# recsalmo (Rapid Typing and Characterization Tool for Whole Genome Sequencing Data of Salmonella)
+# RECSALMO (Rapid Typing and Characterization Tool for Whole Genome Sequencing Data of Salmonella)
 
 **Introduction:**
 
