@@ -19,8 +19,10 @@ This tool is intended to work only in Linux-like operating system e.g. Ubuntu.
 
 The followings are the embedded databases necessary for the analysis run of Salmonella genomes.
 1.	Reference genome: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
-2.	SPIs (Salmonella Pathogenicity Islands): SPI-1 to SPI-17
-3.	CRISPR spacers with assigned nametags
+2.	Reference genome: Salmonella enterica subsp. enterica serovar Typhimurium str. CT18
+3.	Reference genome: Salmonella enterica subsp. enterica serovar Gallinarum str. 287/91
+4.	SPIs (Salmonella Pathogenicity Islands): SPI-1 to SPI-17
+5.	CRISPR spacers with assigned nametags
 
 
 **Outputs:**
@@ -53,8 +55,9 @@ Other than the summary file, there are also phylogenetic trees and pie-charts of
 For the raw analytical report files, each analysis of one genome is composed of essential files as follows.
 1.	“mlst_result.txt”
 2.	“amrfinder_result.txt”
-3.	“SPI_result.txt”
+3.	“SPI_finderResult.txt”
 4.	“crispr_result.txt”
+5.	"spProfile.txt"
 
 
 **Installation:**
@@ -72,16 +75,14 @@ This project is written mainly in Python; there are several dependent packages a
    
    >conda activate myenv
 4. Install dependent conda packages
-   >conda install -c conda-forge biopython,openpyxl,seaborn
-   
-   >conda install -c bioconda sistr_cmd,fastmlst,ncbi-amrfinderplus,parsnp
-6. Install NCBI-Blast+
-   >sudo apt-get -y install ncbi-blast+
-7. Update databases for fastmlst and ncbi-amrfinderplus
+   >conda install -c bioconda fastmlst,sistr_cmd,ncbi-amrfinderplus,parsnp
+
+   >conda install -c conda-forge openpyxl,seaborn
+5. Update databases for fastmlst and ncbi-amrfinderplus packages
    >fastmlst --update-mlst -t 1
    
    >amrfinder -u
-8. Create a folder (any name is fine) and put all the files of the RECSALMO project inside (recsalmo.py is inside the project, first level)
+6. Create a folder (any name is fine) and put all the files of the RECSALMO project inside that folder (recsalmo.py is inside the project, first level).
 
 
 **Usage:**
