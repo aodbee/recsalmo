@@ -58,23 +58,27 @@ This project is written mainly in Python; there are several dependent packages a
 1. Download and install miniconda (Linux version): https://docs.anaconda.com/free/miniconda/index.html
 2. Install Java
    >sudo apt update
+   
    >sudo apt install default-jdk
+   
    >sudo apt install default-jre
 3. Create a custom conda environment (replacing "myenv" with the name of your choice)
    >conda create --name <myenv>
+   
    >conda activate myenv
 4. Install dependent conda packages
    >conda install biopython,numpy,seaborn,matplotlib,openpyxl
+   
    >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplus,parsnp
 6. Install NCBI-Blast+
    >sudo apt-get -y install ncbi-blast+
+7. Update databases for fastmlst and ncbi-amrfinderplus
+   >fastmlst --update-mlst -t 1
+   
+   >amrfinder -u
 8. Create a folder (any name is fine) and put all the files of the RECSALMO project inside (recsalmo.py is inside the project, first level)
 
 
-**After Installation:**
-After installation is done, you would need to update databases for some required dependencies. The packages that need updates are 'fastmlst' and 'ncbi-amrfinderplus'. Go to terminal and type
->fastmlst --update-mlst -t 1
->amrfinder -u
 
 
 
