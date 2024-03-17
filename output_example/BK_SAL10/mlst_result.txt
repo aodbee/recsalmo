@@ -1,0 +1,2 @@
+Genome,Scheme,ST,aroC,dnaN,hemD,hisD,purE,sucA,thrA,clonal_complex
+BK_SAL10.scaffolds.fasta,senterica,46,10,7,21,12,15,12,12,

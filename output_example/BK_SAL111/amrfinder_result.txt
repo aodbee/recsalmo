@@ -1,0 +1,2 @@
+Protein identifier	Contig id	Start	Stop	Strand	Gene symbol	Sequence name	Scope	Element type	Element subtype	Class	Subclass	Method	Target length	Reference sequence length	% Coverage of reference sequence	% Identity to reference sequence	Alignment length	Accession of closest sequence	Name of closest sequence	HMM id	HMM description
+NA	NODE_9_length_178625_cov_86.1373	20161	22794	-	gyrA_D87Y	Salmonella quinolone resistant GyrA	core	AMR	POINT	QUINOLONE	QUINOLONE	POINTX	878	878	100.00	99.89	878	WP_001281271.1	DNA gyrase subunit A GyrA	NA	NA
