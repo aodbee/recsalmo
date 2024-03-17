@@ -25,32 +25,37 @@ The followings are the embedded databases necessary for the analysis run of Salm
 
 **Outputs:**
 
-The outputs comprise both raw analytical reports (from dependent/custom packages and external software) and one summary file in “xlsx” format.  The displayed outputs in the summary file are    
-1.	Identification of Salmonella species/sub-species
-2.	Serotype (sequence-based)
-3.	MLST (Multi-Locus Sequence Typing)
-4.	cgMLST (core-genome MLST)
-5.	Serovar cgMLST
-6.	Serogroup
-7.	cgMLST subspecies
-8.	AMR classes (in the format of “CLASS1:SUBCLASS1|CLASS2:SUBCLASS2|…”
-9.	SPI (Salmonella Pathogenicity Islands) 
-10.	Number of CRISPR Locus
+The outputs comprise both raw analytical reports (from dependent/custom packages and external software) and one summary file in “xlsx” and "csv" format. All the columns in the summary file include    
+1.	Genome Assembly Name
+2.	Salmonella sub-species
+3.	Salmonella serovar
+4.	MLST (Multi-Locus Sequence Typing)
+5.	cgMLST (core-genome MLST)
+6.	AMR:Gene/Antibiotic
+7.	SPI (Salmonella Pathogenicity Islands) 
+8.	Spacer-C1 (Spacer list in CRISPR locus 1)
+9.	Spacer-C2 (Spacer list in CRISPR locus 2)
+10.	NumSP-C1 (Number of spacers in CRISPR locus 1)
+11.	NumSP-C2 (Number of spacers in CRISPR locus 2)
+12.	DR-C1 (Direct repeat of CRISPR locus 1)
+13.	DR-C2 (Direct repeat of CRISPR locus 2)
+14.	Pos-C1 (Start-Stop Positions of CRISPR locus 1)
+15.	Pos-C2 (Start-Stop Positions of CRISPR locus 2)
+16.	LenC1 (Length in base-pair of  CRISPR locus 1)
+17.	LenC2 (Length in base-pair of  CRISPR locus 2) 
     
-Other than the summary file, there are also the phylogenetic tree of all the genomes created by ParSNP tool using Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 as the reference genome (NCBI Genome ID = SO4698-09 and accession = LN999997.1). The phylogenetic tree file is in the *.ggr format which can be opened and visualized by the Gingr software. The phylogenetic tree-related files are in the folder “treeoutput”. Moreover, there two pie charts presenting Serotype and MLST. The summary file and pie chart images are in the “out_file” folder. 
+Other than the summary file, there are also phylogenetic trees and pie-charts of all the genomes as follows
+1. SNP-based Phylogenetic tree: this dendrogram is created by ParSNP tool with the Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 as the reference genome (NCBI Genome ID = SO4698-09 and accession = LN999997.1). The phylogenetic tree file is in the *.ggr format which can be opened and visualized by the Gingr software.
+2. CRISPR-based Phylogenetic tree: this dendrogram is created by the alignment of CRISPR spacers of both locus 1 and 2.
+3. Pie chart of serovar
+4. Pie chart of ST
+
 For the raw analytical report files, each analysis of one genome is composed of essential files as follows.
-1.	“SeqSero_result.txt”
-2.	“mlst_result.txt”
-3.	“amrfinder_result.txt”
-4.	“SPI_result.txt”
-5.	“crispr_result.txt”
+1.	“mlst_result.txt”
+2.	“amrfinder_result.txt”
+3.	“SPI_result.txt”
+4.	“crispr_result.txt”
 
-
-**Usage:**
-
-Users need to supply the input folder containing the genome assembly files. And the main output folder should be supplied as well but it is optional. If the output folder is not given, the folder “out_file” will be created in the current working directory and used as the main output folder.
-Example of the program call 
->python recsalmo.py –input /input_folder/ –output /output_folder/  
 
 **Installation:**
 
@@ -67,9 +72,9 @@ This project is written mainly in Python; there are several dependent packages a
    
    >conda activate myenv
 4. Install dependent conda packages
-   >conda install biopython,numpy,seaborn,matplotlib,openpyxl
+   >conda install -c conda-forge biopython,openpyxl,seaborn
    
-   >conda install -c bioconda seqsero2,sistr_cmd,fastmlst,ncbi-amrfinderplus,parsnp
+   >conda install -c bioconda sistr_cmd,fastmlst,ncbi-amrfinderplus,parsnp
 6. Install NCBI-Blast+
    >sudo apt-get -y install ncbi-blast+
 7. Update databases for fastmlst and ncbi-amrfinderplus
@@ -79,7 +84,11 @@ This project is written mainly in Python; there are several dependent packages a
 8. Create a folder (any name is fine) and put all the files of the RECSALMO project inside (recsalmo.py is inside the project, first level)
 
 
+**Usage:**
 
+Users need to supply the input folder containing the genome assembly files. And the main output folder should be supplied as well but it is optional. If the output folder is not given, the folder “out_file” will be created in the current working directory and used as the main output folder.
+Example of the program call 
+>python recsalmo.py –input /input_folder/ –output /output_folder/  
 
 
 
