@@ -71,7 +71,7 @@ This project is written mainly in Python; there are several dependent packages a
    
    >sudo apt install default-jre
 3. Create a custom conda environment (replacing "myenv" with the name of your choice)
-   >conda create --name <myenv>
+   >conda create --name myenv
    
    >conda activate myenv
 4. Install dependent conda packages
@@ -88,9 +88,15 @@ This project is written mainly in Python; there are several dependent packages a
 **Usage:**
 
 Users need to supply the input folder containing the genome assembly files. And the main output folder should be supplied as well but it is optional. If the output folder is not given, the folder “out_file” will be created in the current working directory and used as the main output folder.
-Example of the program call 
->python recsalmo.py –input /input_folder/ –output /output_folder/  
+Users need to supply 
+  1. Absolute path to recsalmo.py
+  2. Absolute path to input folder
+  3. Absolute path to output folder (optional)
+The format of program call is below
+>python /path/recsalmo.py –input /path/input_folder –output /path/output_folder
 
+Example program call supposing that all paths are under /home 
+>python /home/recsalmo/recsalmo.py –input /home/input_folder –output /home/output_folder
 
 
   
