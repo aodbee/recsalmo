@@ -98,5 +98,6 @@ The format of program call is below
 Example program call supposing that all paths are under /home 
 >python /home/recsalmo/recsalmo.py –input /home/input_folder –output /home/output_folder
 
-
+**Citation**
+Poonchareon, K., Chukeatirote, E., & Wisittipanit, N. (2024). RECSALMO: Rapid typing and characterization tool for whole genome sequencing data of Salmonella. Science, Engineering and Health Studies, 18, 24030004. https://doi.org/10.69598/sehs.18.24030004
   
