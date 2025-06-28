@@ -1,0 +1,11 @@
+
+version: '3.8'
+
+services:
+ recsalmo:
+ build: .
+ container_name: recsalmo_container
+ volumes:
+ - ./input_folder:/input
+ - ./output_folder:/output
+ command: ["--input", "/input", "--output", "/output"]
