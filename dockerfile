@@ -1,4 +1,3 @@
-
 # ใช้ base image ที่รองรับ conda และเหมาะกับ bioinformatics
 FROM continuumio/miniconda3
 
@@ -10,20 +9,15 @@ COPY . /recsalmo
 
 # ติดตั้ง Java สำหรับโปรแกรมที่ต้องใช้
 RUN apt-get update && \
- apt-get install -y default-jdk default-jre && \
- apt-get clean
+    apt-get install -y default-jdk default-jre && \
+    apt-get clean
 
 # สร้าง conda environment และติดตั้ง dependencies
 RUN conda create -n recsalmo_env python=3.8 -y && \
- echo "conda activate recsalmo_env" >> ~/.bashrc
+    conda run -n recsalmo_env conda install -c bioconda fastmlst sistr_cmd ncbi-amrfinderplus parsnp -y && \
+    conda run -n recsalmo_env conda install -c conda-forge openpyxl seaborn biopython -y && \
+    conda run -n recsalmo_env fastmlst --update-mlst -t 1 && \
+    conda run -n recsalmo_env amrfinder -u
 
-# เปิดใช้งาน environment และติดตั้งแพ็กเกจ
-RUN /bin/bash -c "source ~/.bashrc && \
- conda activate recsalmo_env && \
- conda install -c bioconda fastmlst sistr_cmd ncbi-amrfinderplus parsnp -y && \
- conda install -c conda-forge openpyxl seaborn -y && \
- fastmlst --update-mlst -t 1 && \
- amrfinder -u"
-
-# ตั้งค่า entrypoint สำหรับการเรียกใช้งาน
-ENTRYPOINT ["python", "recsalmo.py"]
+# ใช้ shell แบบ conda run เพื่อเรียกใช้งาน script
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "recsalmo_env", "python", "recsalmo.py"]
