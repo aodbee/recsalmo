@@ -5,8 +5,8 @@ services:
     build: .
     container_name: recsalmoContainer
     volumes:
-      - ./input_folder:/input
-      - ./output_folder:/output
+      - ./input:/input
+      - ./output:/output
     command: ["--input", "/input", "--output", "/output"]
     ports:
       - "8080:8080"
