@@ -7,6 +7,4 @@ services:
     volumes:
       - ./input:/input
       - ./output:/output
-    command: ["--input", "/input", "--output", "/output"]
-    ports:
-      - "8080:8080"
+    command: ["python", "recsalmo.py", "--input", "/input", "--output", "/output"]
