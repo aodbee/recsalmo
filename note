@@ -1,7 +1,7 @@
-docker-compose up --build
-
 📌 หากคุณต้องการ “เพิ่มตัวอย่างใหม่เข้าไปทดแทน”:
 ไฟล์ FASTA ของจีโนมใหม่ → วางไว้ใน input_folder
 ไฟล์ reference ใหม่ → วางไว้ใน maindb/REF
 ไฟล์ SPI ใหม่ → วางไว้ใน maindb/SPI_FS
 ไฟล์ spacer ใหม่ → วางไว้ใน maindb/SPACER โดยอาจแทนที่ spacerall.fasta
+
+docker-compose up --build
