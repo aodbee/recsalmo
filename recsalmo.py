@@ -1211,8 +1211,11 @@ if __name__ == '__main__':
         description='Specialized Python Program for Typing and Characterization of Salmonella Genomes',
         epilog='Thank you for using RECSALMO. Have a superb day!')
     requirement = parser.add_argument_group("requirement")
-    requirement.add_argument("input_dir", help='Directory containing Salmonella genome assemblies')
-    requirement.add_argument("output_dir", help='Main output directory')
+    # requirement.add_argument("input_dir", help='Directory containing Salmonella genome assemblies')
+    # requirement.add_argument("output_dir", help='Main output directory')
+    requirement.add_argument("--input_dir", required=True, help="Directory containing Salmonella genome assemblies")
+    requirement.add_argument("--output_dir", required=True, help="Main output directory")
+
     args = parser.parse_args()
     input_dir = Path(args.input_dir)
     output_dir = Path(args.output_dir)
