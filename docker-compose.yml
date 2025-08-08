@@ -7,4 +7,4 @@ services:
     volumes:
       - ./input:/input
       - ./output:/output
-    command: ["python", "recsalmo.py", "--input", "/input", "--output", "/output"]
+    command: ["python", "recsalmo.py", "--input_dir", "/input", "--output_dir", "/output"]
