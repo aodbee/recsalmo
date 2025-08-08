@@ -1213,8 +1213,9 @@ if __name__ == '__main__':
     requirement = parser.add_argument_group("requirement")
     # requirement.add_argument("input_dir", help='Directory containing Salmonella genome assemblies')
     # requirement.add_argument("output_dir", help='Main output directory')
-    requirement.add_argument("--input_dir", required=True, help="Directory containing Salmonella genome assemblies")
-    requirement.add_argument("--output_dir", required=True, help="Main output directory")
+    parser.add_argument("--input_dir", default="./input", help="Directory containing Salmonella genome assemblies")
+    parser.add_argument("--output_dir", default="./output", help="Main output directory")
+
 
     args = parser.parse_args()
     input_dir = Path(args.input_dir)
